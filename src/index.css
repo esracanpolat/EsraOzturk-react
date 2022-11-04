@@ -108,7 +108,7 @@ code {
 .JoinButton {
   position: fixed;
   border: none;
-  bottom: 5px;
+  bottom: 50px;
   background-color: red;
   color: white;
   height: 60px;

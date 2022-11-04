@@ -27,10 +27,10 @@ export const Detail = () => {
             <span className='detailRemaningText'>
                 {detail && detail.RemainingText}
             </span>
-            <div style={{ padding: 30 }}>
+            <div style={{ width: '100vw', paddingTop: 10, display: 'flex' }} >
                 <div dangerouslySetInnerHTML={{ __html: detail && detail.Description }}></div>
             </div>
-            <div className='d-flex justify-content-center'>
+            <div className='d-flex justify-content-center w-100' >
                 <button className='JoinButton'>
                     Hemen Katıl
                 </button >

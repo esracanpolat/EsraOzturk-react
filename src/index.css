@@ -14,7 +14,6 @@ code {
 
 .header {
   display: flex;
-  margin: 10 !important;
   justify-content: space-between;
 }
 
@@ -43,8 +42,8 @@ code {
   bottom: 0;
   background-color: white;
   justify-content: space-between;
-  border-top-left-radius: 10;
-  border-top-right-radius: 10;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   width: 100vw;
   position: fixed;
   border: rgb(236, 238, 239) solid 1px;

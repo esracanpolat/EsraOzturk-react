@@ -45,16 +45,15 @@ export const HomePage = () => {
             <div style={{ width: '100vw', height: '100vh', overflowX: 'scroll' }}>
                 <div style={{ display: 'inline-flex' }}>
                     {filterData.length === 0 && SelectedBrand === null && brandData.map((brands) => (<>
-                        <div style={{ position: 'relative', display: 'flex', marginLeft: 15, justifyContent: 'center', marginTop: 10 }}>
+                        <div className='brandContanier'>
                             <svg className='transformDiv' style={{ backgroundColor: brands.PromotionCardColor }}>
                             </svg>
                             <div className='HomePageContent'>
-                                <span style={{ position: 'absolute', right: 15, padding: 5, color: 'white', top: '30vh', backgroundColor: 'rgba(29, 30, 28, 1)', fontSize: 14, border: 'none', borderRadius: 20, textAlign: 'center' }}>
+                                <span className='brandRemainigText'>
                                     {brands.RemainingText}
                                 </span>
                                 <img style={{ maxWidth: '300px', borderBottomLeftRadius: 120 }} src={brands.ImageUrl} />
-                                {/* <div style={{ backgroundColor: 'white', borderRadius: '50%', height: 80, width: 80, position: 'absolute', top: '50vh' }}> */}
-                                <img style={{ position: 'absolute', left: '5vw', top: '200px', height: '11vh', zIndex: 20 }} src={brands.BrandIconUrl} />
+                                <img className='brandIcon' src={brands.BrandIconUrl} />
                                 <div style={{ textAlign: 'center', marginTop: 20 }} dangerouslySetInnerHTML={{ __html: brands.Title }}>
                                 </div>
                                 <a onClick={() => navigate(`campaign/${brands.SeoName}/${brands.Id}`)} style={{ color: brands.PromotionCardColor }}> Daha Daha</a>
@@ -63,24 +62,21 @@ export const HomePage = () => {
 
                         </div>  </>))}
                     {filterData.length > 0 && filterData.map((brands) => (<>
-                        <div style={{ position: 'relative', display: 'flex', marginLeft: 15, justifyContent: 'center', marginTop: 10 }}>
+                        <div className='brandContanier'>
                             <svg className='transformDiv' style={{ backgroundColor: brands.PromotionCardColor }}>
                             </svg>
                             <div className='HomePageContent'>
-                                <span style={{ position: 'absolute', right: 15, padding: 5, color: 'white', top: '30vh', backgroundColor: 'rgba(29, 30, 28, 1)', fontSize: 14, border: 'none', borderRadius: 20, textAlign: 'center' }}>
+                                <span className='brandRemainigText'>
                                     {brands.RemainingText}
                                 </span>
                                 <img style={{ maxWidth: '300px', borderBottomLeftRadius: 120 }} src={brands.ImageUrl} />
-                                {/* <div style={{ backgroundColor: 'white', borderRadius: '50%', height: 80, width: 80, position: 'absolute', top: '50vh' }}> */}
-                                <img style={{ position: 'absolute', left: '5vw', top: '25vh', height: '11vh', zIndex: 20 }} src={brands.BrandIconUrl} />
+                                <img className='brandIcon' src={brands.BrandIconUrl} />
                                 <div style={{ textAlign: 'center', marginTop: 20 }} dangerouslySetInnerHTML={{ __html: brands.Title }}>
                                 </div>
                                 <a onClick={() => navigate(`campaign/${brands.SeoName}/${brands.Id}`)} style={{ color: brands.PromotionCardColor }}> Daha Daha</a>
-
-
                             </div>
-
-                        </div>  </>))}
+                        </div>
+                    </>))}
                 </div>
             </div>
             <NavBar />

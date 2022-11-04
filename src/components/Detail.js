@@ -7,7 +7,6 @@ export const Detail = () => {
     const navigate = useNavigate();
     let { id } = useParams();
     useEffect(() => {
-        console.log(id, " id");
         axios.get(`https://api.extrazone.com/promotions?Id=${id}`, {
             headers: {
                 'Content-Type': 'application/json',
@@ -16,24 +15,23 @@ export const Detail = () => {
             }
         }).then((promotions) => {
             setDetail(promotions.data);
-            console.log(promotions.data, "x");
         })
     }, [])
     return (
         <div>
             <img style={{ borderBottomLeftRadius: '40%', height: 400 }} src={detail && detail.ImageUrl} />
-            <img style={{ position: 'absolute', bottom: '40vh', height: '12vh', left: '4vh' }} src={detail && detail.BrandIconUrl} />
+            <img className='detailImageIcon' src={detail && detail.BrandIconUrl} />
             <a onClick={() => navigate('/')}>
                 <img style={{ position: 'absolute', top: '3vh', left: '2vh' }} src='/images/Back_Button.png' />
             </a>
-            <span style={{ position: 'absolute', right: 15, padding: 5, color: 'white', bottom: '40vh', backgroundColor: 'rgba(29, 30, 28, 1)', fontSize: 14, border: 'none', borderRadius: 20, textAlign: 'center' }}>
+            <span className='detailRemaningText'>
                 {detail && detail.RemainingText}
             </span>
             <div style={{ padding: 30 }}>
                 <div dangerouslySetInnerHTML={{ __html: detail && detail.Description }}></div>
             </div>
             <div className='d-flex justify-content-center'>
-                <button style={{ position: 'fixed', border: 'none', bottom: 5, backgroundColor: 'red', color: 'white', height: 60, width: 160, borderRadius: 50, zIndex: 10 }}>
+                <button className='JoinButton'>
                     Hemen Katıl
                 </button >
             </div>

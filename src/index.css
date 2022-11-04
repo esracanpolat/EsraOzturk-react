@@ -12,6 +12,35 @@ code {
     monospace;
 }
 
+.brandIcon {
+  position: absolute;
+  left: 5vw;
+  top: 200px;
+  height: 11vh;
+  z-index: 20;
+}
+
+.brandContanier {
+  position: relative;
+  display: flex;
+  margin-left: 15px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.brandRemainigText {
+  position: absolute;
+  right: 15px;
+  padding: 5px;
+  color: white;
+  top: 30vh;
+  background-color: rgba(29, 30, 28, 1);
+  font-size: 14px;
+  border: none;
+  border-radius: 20px;
+  text-align: center;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -36,6 +65,26 @@ code {
   z-index: 10px;
 }
 
+.detailImageIcon {
+  position: absolute;
+  bottom: 40vh;
+  height: 12vh;
+  left: 4vh;
+}
+
+.detailRemaningText {
+  position: absolute;
+  right: 15px;
+  padding: 5px;
+  color: white;
+  top: 300px;
+  background-color: rgba(29, 30, 28, 1);
+  font-size: 14px;
+  border: none;
+  border-radius: 20px;
+  text-align: center;
+}
+
 .Navbar {
   display: flex;
   height: 14vh;
@@ -54,4 +103,23 @@ code {
   justify-content: flex-start;
   background-color: transparent;
   z-index: 10
+}
+
+.JoinButton {
+  position: fixed;
+  border: none;
+  bottom: 5px;
+  background-color: red;
+  color: white;
+  height: 60px;
+  width: 160px;
+  border-radius: 50px;
+  z-index: 10px;
+}
+
+.BrandScrollDiv {
+  border-radius: 10px;
+  height: 36px;
+  width: 105px;
+  margin-left: 8px;
 }
